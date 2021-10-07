@@ -13,9 +13,13 @@
 		A92DDB5A270F77EC00135B58 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A92DDB58270F77EC00135B58 /* Main.storyboard */; };
 		A92DDB5C270F77F100135B58 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A92DDB5B270F77F100135B58 /* Assets.xcassets */; };
 		A92DDB5F270F77F100135B58 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A92DDB5D270F77F100135B58 /* LaunchScreen.storyboard */; };
+		E12C0DA22E5DAE2FB2E19D57 /* Pods_TimePad_Time_Tracker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9DF34B473E233F1DE6C33546 /* Pods_TimePad_Time_Tracker.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5E20E1A7B589E9227E4B250B /* Pods-TimePad-Time-Tracker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TimePad-Time-Tracker.release.xcconfig"; path = "Target Support Files/Pods-TimePad-Time-Tracker/Pods-TimePad-Time-Tracker.release.xcconfig"; sourceTree = "<group>"; };
+		7F0D30755D3CF1EEF2BE1B66 /* Pods-TimePad-Time-Tracker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TimePad-Time-Tracker.debug.xcconfig"; path = "Target Support Files/Pods-TimePad-Time-Tracker/Pods-TimePad-Time-Tracker.debug.xcconfig"; sourceTree = "<group>"; };
+		9DF34B473E233F1DE6C33546 /* Pods_TimePad_Time_Tracker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TimePad_Time_Tracker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A92DDB4F270F77EC00135B58 /* TimePad-Time-Tracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "TimePad-Time-Tracker.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A92DDB52270F77EC00135B58 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A92DDB54270F77EC00135B58 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -31,17 +35,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E12C0DA22E5DAE2FB2E19D57 /* Pods_TimePad_Time_Tracker.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A2448A925DF7175EB634BBA8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9DF34B473E233F1DE6C33546 /* Pods_TimePad_Time_Tracker.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		A92DDB46270F77EC00135B58 = {
 			isa = PBXGroup;
 			children = (
 				A92DDB51270F77EC00135B58 /* TimePad-Time-Tracker */,
 				A92DDB50270F77EC00135B58 /* Products */,
+				B9215EFA9834CE99529A8392 /* Pods */,
+				A2448A925DF7175EB634BBA8 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -67,6 +82,15 @@
 			path = "TimePad-Time-Tracker";
 			sourceTree = "<group>";
 		};
+		B9215EFA9834CE99529A8392 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				7F0D30755D3CF1EEF2BE1B66 /* Pods-TimePad-Time-Tracker.debug.xcconfig */,
+				5E20E1A7B589E9227E4B250B /* Pods-TimePad-Time-Tracker.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -74,9 +98,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A92DDB63270F77F100135B58 /* Build configuration list for PBXNativeTarget "TimePad-Time-Tracker" */;
 			buildPhases = (
+				2D8B911AA9C035BEDB222A97 /* [CP] Check Pods Manifest.lock */,
 				A92DDB4B270F77EC00135B58 /* Sources */,
 				A92DDB4C270F77EC00135B58 /* Frameworks */,
 				A92DDB4D270F77EC00135B58 /* Resources */,
+				A92DDB66270F7BBF00135B58 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -131,6 +157,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2D8B911AA9C035BEDB222A97 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TimePad-Time-Tracker-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A92DDB66270F7BBF00135B58 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/SwiftLint/swiftlint\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		A92DDB4B270F77EC00135B58 /* Sources */ = {
@@ -283,6 +351,7 @@
 		};
 		A92DDB64270F77F100135B58 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7F0D30755D3CF1EEF2BE1B66 /* Pods-TimePad-Time-Tracker.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -302,6 +371,7 @@
 		};
 		A92DDB65270F77F100135B58 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5E20E1A7B589E9227E4B250B /* Pods-TimePad-Time-Tracker.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

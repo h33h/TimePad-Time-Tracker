@@ -18,7 +18,7 @@ public final class TaskContainer: TaskContainerProtocol {
     private var tasksArray: [Task]
     private var currentTask: Task?
     private var currentTaskColor: Color?
-    private var time: Double
+    private var time: Int
     private var timer: Timer
     public var title: String
     public var iconTitle: String
@@ -39,7 +39,7 @@ public final class TaskContainer: TaskContainerProtocol {
         self.iconTitle = icon
         self.tagValue = tag
         self.tasksArray = tasks
-        self.time = 0.0
+        self.time = 0
         self.timer = Timer()
     }
     convenience init (containerTitle title: String) {
@@ -64,7 +64,7 @@ public final class TaskContainer: TaskContainerProtocol {
         }
         currentTask.start()
         timer = Timer(timeInterval: 1.0, repeats: true, block: {[weak self] _ in
-            self?.time += 1.0
+            self?.time += 1
         })
     }
     public func stop() {

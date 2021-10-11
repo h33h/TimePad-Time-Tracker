@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import UIKit
 
 public protocol TagProtocol {
     var title: String { get set }
@@ -29,8 +30,14 @@ public final class Tag: TagProtocol {
     }
 }
 
-extension Double {
+extension TagProtocol {
+    func convertColor(color: Color) -> UIColor {
+        UIColor(red: CGFloat(color.red), green: CGFloat(color.green), blue: CGFloat(color.blue), alpha: CGFloat(color.alpha))
+    }
+}
+
+extension Int {
     func secondsToHoursMinutesSeconds() -> Time {
-        Time(hours: Int(self) / 3600, minutes: (Int(self) % 3600) / 60, seconds: (Int(self) % 3600) % 60)
+        Time(hours: self / 3600, minutes: self % 3600 / 60, seconds: self % 3600 % 60)
     }
 }

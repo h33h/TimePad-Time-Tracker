@@ -16,7 +16,7 @@ public protocol TaskProtocol: TagProtocol {
 public final class Task: TaskProtocol {
     private var taskColor: Color
     private var timer: Timer
-    private var time: Double
+    private var time: Int
     public var title: String
     public var color: Color {
         taskColor
@@ -28,11 +28,11 @@ public final class Task: TaskProtocol {
         self.title = title
         self.taskColor = color
         self.timer = Timer()
-        self.time = 0.0
+        self.time = 0
     }
     public func start() {
         timer = Timer(timeInterval: 1.0, repeats: true, block: {[weak self] _ in
-            self?.time += 1.0
+            self?.time += 1
         })
     }
     public func stop() {

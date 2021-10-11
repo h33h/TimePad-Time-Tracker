@@ -9,10 +9,14 @@
 /* Begin PBXBuildFile section */
 		A92DDB53270F77EC00135B58 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A92DDB52270F77EC00135B58 /* AppDelegate.swift */; };
 		A92DDB55270F77EC00135B58 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A92DDB54270F77EC00135B58 /* SceneDelegate.swift */; };
-		A92DDB57270F77EC00135B58 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A92DDB56270F77EC00135B58 /* ViewController.swift */; };
+		A92DDB57270F77EC00135B58 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A92DDB56270F77EC00135B58 /* MainViewController.swift */; };
 		A92DDB5A270F77EC00135B58 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A92DDB58270F77EC00135B58 /* Main.storyboard */; };
 		A92DDB5C270F77F100135B58 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A92DDB5B270F77F100135B58 /* Assets.xcassets */; };
 		A92DDB5F270F77F100135B58 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A92DDB5D270F77F100135B58 /* LaunchScreen.storyboard */; };
+		A9DB6620271335900017E3B4 /* CircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9DB661F271335900017E3B4 /* CircleView.swift */; };
+		A9DB66222713725B0017E3B4 /* TagView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9DB66212713725B0017E3B4 /* TagView.swift */; };
+		A9DB6629271463300017E3B4 /* CustomTabBarContoller.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9DB6628271463300017E3B4 /* CustomTabBarContoller.swift */; };
+		A9DB662D27148F870017E3B4 /* CurrentTaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9DB662C27148F870017E3B4 /* CurrentTaskViewController.swift */; };
 		E12C0DA22E5DAE2FB2E19D57 /* Pods_TimePad_Time_Tracker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9DF34B473E233F1DE6C33546 /* Pods_TimePad_Time_Tracker.framework */; };
 /* End PBXBuildFile section */
 
@@ -23,11 +27,15 @@
 		A92DDB4F270F77EC00135B58 /* TimePad-Time-Tracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "TimePad-Time-Tracker.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A92DDB52270F77EC00135B58 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A92DDB54270F77EC00135B58 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		A92DDB56270F77EC00135B58 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		A92DDB56270F77EC00135B58 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		A92DDB59270F77EC00135B58 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A92DDB5B270F77F100135B58 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A92DDB5E270F77F100135B58 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A92DDB60270F77F100135B58 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A9DB661F271335900017E3B4 /* CircleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleView.swift; sourceTree = "<group>"; };
+		A9DB66212713725B0017E3B4 /* TagView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagView.swift; sourceTree = "<group>"; };
+		A9DB6628271463300017E3B4 /* CustomTabBarContoller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBarContoller.swift; sourceTree = "<group>"; };
+		A9DB662C27148F870017E3B4 /* CurrentTaskViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentTaskViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,15 +79,35 @@
 		A92DDB51270F77EC00135B58 /* TimePad-Time-Tracker */ = {
 			isa = PBXGroup;
 			children = (
+				A9DB6627271462EE0017E3B4 /* ViewController */,
+				A9DB661E2713356C0017E3B4 /* View */,
 				A92DDB52270F77EC00135B58 /* AppDelegate.swift */,
 				A92DDB54270F77EC00135B58 /* SceneDelegate.swift */,
-				A92DDB56270F77EC00135B58 /* ViewController.swift */,
 				A92DDB58270F77EC00135B58 /* Main.storyboard */,
 				A92DDB5B270F77F100135B58 /* Assets.xcassets */,
 				A92DDB5D270F77F100135B58 /* LaunchScreen.storyboard */,
 				A92DDB60270F77F100135B58 /* Info.plist */,
 			);
 			path = "TimePad-Time-Tracker";
+			sourceTree = "<group>";
+		};
+		A9DB661E2713356C0017E3B4 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				A9DB661F271335900017E3B4 /* CircleView.swift */,
+				A9DB66212713725B0017E3B4 /* TagView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		A9DB6627271462EE0017E3B4 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				A92DDB56270F77EC00135B58 /* MainViewController.swift */,
+				A9DB6628271463300017E3B4 /* CustomTabBarContoller.swift */,
+				A9DB662C27148F870017E3B4 /* CurrentTaskViewController.swift */,
+			);
+			path = ViewController;
 			sourceTree = "<group>";
 		};
 		B9215EFA9834CE99529A8392 /* Pods */ = {
@@ -205,7 +233,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A92DDB57270F77EC00135B58 /* ViewController.swift in Sources */,
+				A9DB662D27148F870017E3B4 /* CurrentTaskViewController.swift in Sources */,
+				A9DB6620271335900017E3B4 /* CircleView.swift in Sources */,
+				A9DB6629271463300017E3B4 /* CustomTabBarContoller.swift in Sources */,
+				A9DB66222713725B0017E3B4 /* TagView.swift in Sources */,
+				A92DDB57270F77EC00135B58 /* MainViewController.swift in Sources */,
 				A92DDB53270F77EC00135B58 /* AppDelegate.swift in Sources */,
 				A92DDB55270F77EC00135B58 /* SceneDelegate.swift in Sources */,
 			);

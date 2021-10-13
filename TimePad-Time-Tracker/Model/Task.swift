@@ -8,32 +8,38 @@
 import Foundation
 
 public protocol TaskProtocol: TagProtocol {
-    var timeValue: Time { get }
+    var time: Time { get }
     func start()
     func stop()
 }
 
 public final class Task: TaskProtocol {
-    private var taskColor: Color
+    private var taskColor: Color?
     private var timer: Timer
-    private var time: Int
+    private var timeValue: Int
     public var title: String
-    public var color: Color {
+    public var color: Color? {
         taskColor
     }
-    public var timeValue: Time {
-        time.secondsToHoursMinutesSeconds()
+    public var time: Time {
+        timeValue.secondsToHoursMinutesSeconds()
     }
-    required init (taskTitle title: String, taskColor color: Color) {
+    required init (taskTitle title: String, taskColor color: Color?) {
         self.title = title
         self.taskColor = color
+        self.timeValue = 0
         self.timer = Timer()
-        self.time = 0
+    }
+    convenience init (taskTitle title: String) {
+        self.init(taskTitle: title, taskColor: nil)
+    }
+    convenience init() {
+        self.init(taskTitle: "")
     }
     public func start() {
-        timer = Timer(timeInterval: 1.0, repeats: true, block: {[weak self] _ in
-            self?.time += 1
-        })
+        timer = Timer(timeInterval: 1.0, repeats: true) { [weak self] _ in
+            self?.timeValue += 1
+        }
     }
     public func stop() {
         timer.invalidate()

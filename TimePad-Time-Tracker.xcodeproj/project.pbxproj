@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A915334C2717912600BB5ACA /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A915334B2717912600BB5ACA /* Extensions.swift */; };
+		A915334E271797A200BB5ACA /* DayContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A915334D271797A200BB5ACA /* DayContainer.swift */; };
+		A915335027179BB800BB5ACA /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = A915334F27179BB800BB5ACA /* Service.swift */; };
 		A92DDB53270F77EC00135B58 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A92DDB52270F77EC00135B58 /* AppDelegate.swift */; };
 		A92DDB55270F77EC00135B58 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A92DDB54270F77EC00135B58 /* SceneDelegate.swift */; };
 		A92DDB57270F77EC00135B58 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A92DDB56270F77EC00135B58 /* ViewController.swift */; };
@@ -24,6 +27,9 @@
 		5E20E1A7B589E9227E4B250B /* Pods-TimePad-Time-Tracker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TimePad-Time-Tracker.release.xcconfig"; path = "Target Support Files/Pods-TimePad-Time-Tracker/Pods-TimePad-Time-Tracker.release.xcconfig"; sourceTree = "<group>"; };
 		7F0D30755D3CF1EEF2BE1B66 /* Pods-TimePad-Time-Tracker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TimePad-Time-Tracker.debug.xcconfig"; path = "Target Support Files/Pods-TimePad-Time-Tracker/Pods-TimePad-Time-Tracker.debug.xcconfig"; sourceTree = "<group>"; };
 		9DF34B473E233F1DE6C33546 /* Pods_TimePad_Time_Tracker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TimePad_Time_Tracker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A915334B2717912600BB5ACA /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		A915334D271797A200BB5ACA /* DayContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayContainer.swift; sourceTree = "<group>"; };
+		A915334F27179BB800BB5ACA /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
 		A92DDB4F270F77EC00135B58 /* TimePad-Time-Tracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "TimePad-Time-Tracker.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A92DDB52270F77EC00135B58 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A92DDB54270F77EC00135B58 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -94,10 +100,13 @@
 		A9DB66152712E3550017E3B4 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				A9DB66162712E38B0017E3B4 /* Task.swift */,
+				A915334F27179BB800BB5ACA /* Service.swift */,
+				A915334D271797A200BB5ACA /* DayContainer.swift */,
 				A9DB661C2712F6870017E3B4 /* TaskContainer.swift */,
+				A9DB66162712E38B0017E3B4 /* Task.swift */,
 				A9DB66182712E3D20017E3B4 /* Tag.swift */,
 				A9DB661A2712F4370017E3B4 /* Structures.swift */,
+				A915334B2717912600BB5ACA /* Extensions.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -228,8 +237,11 @@
 				A9DB66172712E38B0017E3B4 /* Task.swift in Sources */,
 				A9DB661B2712F4370017E3B4 /* Structures.swift in Sources */,
 				A92DDB57270F77EC00135B58 /* ViewController.swift in Sources */,
+				A915334C2717912600BB5ACA /* Extensions.swift in Sources */,
+				A915334E271797A200BB5ACA /* DayContainer.swift in Sources */,
 				A9DB66192712E3D20017E3B4 /* Tag.swift in Sources */,
 				A92DDB53270F77EC00135B58 /* AppDelegate.swift in Sources */,
+				A915335027179BB800BB5ACA /* Service.swift in Sources */,
 				A9DB661D2712F6870017E3B4 /* TaskContainer.swift in Sources */,
 				A92DDB55270F77EC00135B58 /* SceneDelegate.swift in Sources */,
 			);

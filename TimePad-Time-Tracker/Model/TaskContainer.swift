@@ -7,71 +7,59 @@
 
 import Foundation
 
-public protocol TaskContainerProtocol: TaskProtocol {
-    var iconTitle: String { get set }
-    var tag: Tag? { get }
-    var tasks: [Task] { get }
-}
-
-public final class TaskContainer: TaskContainerProtocol {
-    private var tagValue: Tag?
-    private var tasksArray: [Task]
-    private var currentTask: Task?
-    private var currentTaskColor: Color?
-    private var time: Int
-    private var timer: Timer
-    public var title: String
-    public var iconTitle: String
-    public var color: Color {
-        currentTaskColor ?? Color(red: 0.51, green: 0.51, blue: 0.51, alpha: 1)
+public final class TaskContainer {
+    private var tagValue: TagProtocol?
+    private var tasksArray: [TaskProtocol]
+    private var curTask: TaskProtocol?
+    private var timeValue: Int {
+        var allTime = 0
+        for task in tasksArray {
+            allTime += task.time.toSeconds()
+        }
+        return allTime
     }
-    public var tag: Tag? {
+    private var iconTitle: String
+    public var title: String
+    public var tag: TagProtocol? {
         tagValue
     }
-    public var tasks: [Task] {
+    public var tasks: [TaskProtocol] {
         tasksArray
     }
-    public var timeValue: Time {
-        time.secondsToHoursMinutesSeconds()
+    public var currentTask: TaskProtocol? {
+        curTask
     }
-    required init (containerTitle title: String, containerIconTitle icon: String, tag: Tag?, tasks: [Task]) {
+    required init (containerTitle title: String,
+                   containerIconTitle icon: String,
+                   tag: TagProtocol? = nil,
+                   tasks: [TaskProtocol] = [TaskProtocol]()) {
         self.title = title
         self.iconTitle = icon
         self.tagValue = tag
         self.tasksArray = tasks
-        self.time = 0
-        self.timer = Timer()
+        guard !tasksArray.isEmpty && (currentTask == nil) else { return }
+        self.curTask = tasksArray.first
     }
     convenience init (containerTitle title: String) {
-        self.init(containerTitle: title, containerIconTitle: "noIcon", tag: nil, tasks: [Task]())
+        self.init(containerTitle: title, containerIconTitle: "")
+    }
+    convenience init () {
+        self.init(containerTitle: "")
     }
     public func selectCurrentTask(title: String) {
         for task in tasks where task.title == title {
-            currentTask = task
+            curTask = task
         }
     }
-    public func pushTask(task: Task) {
+    public func setTag (tag: TagProtocol) {
+        tagValue = tag
+    }
+    public func pushTask(task: TaskProtocol) {
         tasksArray.append(task)
     }
     public func removeTask(title: String) {
         for (index, task) in tasksArray.enumerated() where task.title == title {
             tasksArray.remove(at: index)
         }
-    }
-    public func start() {
-        guard let currentTask = currentTask else {
-            return
-        }
-        currentTask.start()
-        timer = Timer(timeInterval: 1.0, repeats: true, block: {[weak self] _ in
-            self?.time += 1
-        })
-    }
-    public func stop() {
-        guard let currentTask = currentTask else {
-            return
-        }
-        currentTask.stop()
-        timer.invalidate()
     }
 }

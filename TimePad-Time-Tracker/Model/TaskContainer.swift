@@ -20,6 +20,9 @@ public final class TaskContainer {
     }
     private var iconTitle: String
     public var title: String
+    public var icon: String {
+        iconTitle
+    }
     public var tag: TagProtocol? {
         tagValue
     }

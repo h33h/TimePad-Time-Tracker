@@ -7,13 +7,17 @@
 
 import UIKit
 
-class TagView: UIView {
-
-    override func draw(_ rect: CGRect) {
-        let label = UILabel()
-        label.text = "text"
-        frame = CGRect(x: rect.origin.x, y: rect.origin.y, width: rect.width + 16, height: rect.height + 10)
-        label.center = center
+@IBDesignable
+class TagView: UILabel {
+    override var textColor: UIColor? {
+        didSet {
+            backgroundColor = textColor?.withAlphaComponent(0.1)
+        }
+    }
+    override func layoutSubviews() {
+        frame = CGRect(x: frame.origin.x, y: frame.origin.y, width: frame.size.width + 8, height: frame.size.height + 5)
+        textAlignment = .center
+        clipsToBounds = true
         layer.cornerRadius = 6
     }
 }

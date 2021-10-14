@@ -7,23 +7,27 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		A915334C2717912600BB5ACA /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A915334B2717912600BB5ACA /* Extensions.swift */; };
-		A915334E271797A200BB5ACA /* DayContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A915334D271797A200BB5ACA /* DayContainer.swift */; };
+		A915334C2717912600BB5ACA /* Int.swift in Sources */ = {isa = PBXBuildFile; fileRef = A915334B2717912600BB5ACA /* Int.swift */; };
+		A915334E271797A200BB5ACA /* TodayTasks.swift in Sources */ = {isa = PBXBuildFile; fileRef = A915334D271797A200BB5ACA /* TodayTasks.swift */; };
 		A915335027179BB800BB5ACA /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = A915334F27179BB800BB5ACA /* Service.swift */; };
+		A91533592718383E00BB5ACA /* TaskGroupTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A91533572718383E00BB5ACA /* TaskGroupTableViewCell.swift */; };
+		A915335A2718383E00BB5ACA /* TaskGroupTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A91533582718383E00BB5ACA /* TaskGroupTableViewCell.xib */; };
+		A915335C2718429400BB5ACA /* CurrentTaskVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A915335B2718429400BB5ACA /* CurrentTaskVC.swift */; };
+		A915335E271865CB00BB5ACA /* TimerScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A915335D271865CB00BB5ACA /* TimerScreenViewController.swift */; };
+		A91533602718806600BB5ACA /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = A915335F2718806600BB5ACA /* Color.swift */; };
 		A92DDB53270F77EC00135B58 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A92DDB52270F77EC00135B58 /* AppDelegate.swift */; };
 		A92DDB55270F77EC00135B58 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A92DDB54270F77EC00135B58 /* SceneDelegate.swift */; };
 		A92DDB57270F77EC00135B58 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A92DDB56270F77EC00135B58 /* MainViewController.swift */; };
 		A92DDB5A270F77EC00135B58 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A92DDB58270F77EC00135B58 /* Main.storyboard */; };
 		A92DDB5C270F77F100135B58 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A92DDB5B270F77F100135B58 /* Assets.xcassets */; };
 		A92DDB5F270F77F100135B58 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A92DDB5D270F77F100135B58 /* LaunchScreen.storyboard */; };
+		A9DB66172712E38B0017E3B4 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9DB66162712E38B0017E3B4 /* Task.swift */; };
+		A9DB66192712E3D20017E3B4 /* Tag.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9DB66182712E3D20017E3B4 /* Tag.swift */; };
+		A9DB661B2712F4370017E3B4 /* Time.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9DB661A2712F4370017E3B4 /* Time.swift */; };
+		A9DB661D2712F6870017E3B4 /* TaskContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9DB661C2712F6870017E3B4 /* TaskContainer.swift */; };
 		A9DB6620271335900017E3B4 /* CircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9DB661F271335900017E3B4 /* CircleView.swift */; };
 		A9DB66222713725B0017E3B4 /* TagView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9DB66212713725B0017E3B4 /* TagView.swift */; };
 		A9DB6629271463300017E3B4 /* CustomTabBarContoller.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9DB6628271463300017E3B4 /* CustomTabBarContoller.swift */; };
-		A9DB662D27148F870017E3B4 /* CurrentTaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9DB662C27148F870017E3B4 /* CurrentTaskViewController.swift */; };
-		A9DB66172712E38B0017E3B4 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9DB66162712E38B0017E3B4 /* Task.swift */; };
-		A9DB66192712E3D20017E3B4 /* Tag.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9DB66182712E3D20017E3B4 /* Tag.swift */; };
-		A9DB661B2712F4370017E3B4 /* Structures.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9DB661A2712F4370017E3B4 /* Structures.swift */; };
-		A9DB661D2712F6870017E3B4 /* TaskContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9DB661C2712F6870017E3B4 /* TaskContainer.swift */; };
 		E12C0DA22E5DAE2FB2E19D57 /* Pods_TimePad_Time_Tracker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9DF34B473E233F1DE6C33546 /* Pods_TimePad_Time_Tracker.framework */; };
 /* End PBXBuildFile section */
 
@@ -31,9 +35,14 @@
 		5E20E1A7B589E9227E4B250B /* Pods-TimePad-Time-Tracker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TimePad-Time-Tracker.release.xcconfig"; path = "Target Support Files/Pods-TimePad-Time-Tracker/Pods-TimePad-Time-Tracker.release.xcconfig"; sourceTree = "<group>"; };
 		7F0D30755D3CF1EEF2BE1B66 /* Pods-TimePad-Time-Tracker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TimePad-Time-Tracker.debug.xcconfig"; path = "Target Support Files/Pods-TimePad-Time-Tracker/Pods-TimePad-Time-Tracker.debug.xcconfig"; sourceTree = "<group>"; };
 		9DF34B473E233F1DE6C33546 /* Pods_TimePad_Time_Tracker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TimePad_Time_Tracker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		A915334B2717912600BB5ACA /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
-		A915334D271797A200BB5ACA /* DayContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayContainer.swift; sourceTree = "<group>"; };
+		A915334B2717912600BB5ACA /* Int.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Int.swift; sourceTree = "<group>"; };
+		A915334D271797A200BB5ACA /* TodayTasks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayTasks.swift; sourceTree = "<group>"; };
 		A915334F27179BB800BB5ACA /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
+		A91533572718383E00BB5ACA /* TaskGroupTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskGroupTableViewCell.swift; sourceTree = "<group>"; };
+		A91533582718383E00BB5ACA /* TaskGroupTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TaskGroupTableViewCell.xib; sourceTree = "<group>"; };
+		A915335B2718429400BB5ACA /* CurrentTaskVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentTaskVC.swift; sourceTree = "<group>"; };
+		A915335D271865CB00BB5ACA /* TimerScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerScreenViewController.swift; sourceTree = "<group>"; };
+		A915335F2718806600BB5ACA /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		A92DDB4F270F77EC00135B58 /* TimePad-Time-Tracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "TimePad-Time-Tracker.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A92DDB52270F77EC00135B58 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A92DDB54270F77EC00135B58 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -42,14 +51,13 @@
 		A92DDB5B270F77F100135B58 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A92DDB5E270F77F100135B58 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A92DDB60270F77F100135B58 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A9DB66162712E38B0017E3B4 /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
+		A9DB66182712E3D20017E3B4 /* Tag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tag.swift; sourceTree = "<group>"; };
+		A9DB661A2712F4370017E3B4 /* Time.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Time.swift; sourceTree = "<group>"; };
+		A9DB661C2712F6870017E3B4 /* TaskContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskContainer.swift; sourceTree = "<group>"; };
 		A9DB661F271335900017E3B4 /* CircleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleView.swift; sourceTree = "<group>"; };
 		A9DB66212713725B0017E3B4 /* TagView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagView.swift; sourceTree = "<group>"; };
 		A9DB6628271463300017E3B4 /* CustomTabBarContoller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBarContoller.swift; sourceTree = "<group>"; };
-		A9DB662C27148F870017E3B4 /* CurrentTaskViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentTaskViewController.swift; sourceTree = "<group>"; };
-		A9DB66162712E38B0017E3B4 /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
-		A9DB66182712E3D20017E3B4 /* Tag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tag.swift; sourceTree = "<group>"; };
-		A9DB661A2712F4370017E3B4 /* Structures.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Structures.swift; sourceTree = "<group>"; };
-		A9DB661C2712F6870017E3B4 /* TaskContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskContainer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +114,21 @@
 			path = "TimePad-Time-Tracker";
 			sourceTree = "<group>";
 		};
+		A9DB66152712E3550017E3B4 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				A915334F27179BB800BB5ACA /* Service.swift */,
+				A915334D271797A200BB5ACA /* TodayTasks.swift */,
+				A9DB661C2712F6870017E3B4 /* TaskContainer.swift */,
+				A9DB66162712E38B0017E3B4 /* Task.swift */,
+				A9DB66182712E3D20017E3B4 /* Tag.swift */,
+				A9DB661A2712F4370017E3B4 /* Time.swift */,
+				A915334B2717912600BB5ACA /* Int.swift */,
+				A915335F2718806600BB5ACA /* Color.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		A9DB661E2713356C0017E3B4 /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -120,23 +143,12 @@
 			children = (
 				A92DDB56270F77EC00135B58 /* MainViewController.swift */,
 				A9DB6628271463300017E3B4 /* CustomTabBarContoller.swift */,
-				A9DB662C27148F870017E3B4 /* CurrentTaskViewController.swift */,
+				A915335B2718429400BB5ACA /* CurrentTaskVC.swift */,
+				A91533572718383E00BB5ACA /* TaskGroupTableViewCell.swift */,
+				A91533582718383E00BB5ACA /* TaskGroupTableViewCell.xib */,
+				A915335D271865CB00BB5ACA /* TimerScreenViewController.swift */,
 			);
 			path = ViewController;
-               sourceTree = "<group>";
-        };
-		A9DB66152712E3550017E3B4 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				A915334F27179BB800BB5ACA /* Service.swift */,
-				A915334D271797A200BB5ACA /* DayContainer.swift */,
-				A9DB661C2712F6870017E3B4 /* TaskContainer.swift */,
-				A9DB66162712E38B0017E3B4 /* Task.swift */,
-				A9DB66182712E3D20017E3B4 /* Tag.swift */,
-				A9DB661A2712F4370017E3B4 /* Structures.swift */,
-				A915334B2717912600BB5ACA /* Extensions.swift */,
-			);
-			path = Model;
 			sourceTree = "<group>";
 		};
 		B9215EFA9834CE99529A8392 /* Pods */ = {
@@ -177,7 +189,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1250;
-				LastUpgradeCheck = 1250;
+				LastUpgradeCheck = 1300;
 				TargetAttributes = {
 					A92DDB4E270F77EC00135B58 = {
 						CreatedOnToolsVersion = 12.5.1;
@@ -209,6 +221,7 @@
 			files = (
 				A92DDB5F270F77F100135B58 /* LaunchScreen.storyboard in Resources */,
 				A92DDB5C270F77F100135B58 /* Assets.xcassets in Resources */,
+				A915335A2718383E00BB5ACA /* TaskGroupTableViewCell.xib in Resources */,
 				A92DDB5A270F77EC00135B58 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -262,19 +275,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A9DB662D27148F870017E3B4 /* CurrentTaskViewController.swift in Sources */,
 				A9DB6620271335900017E3B4 /* CircleView.swift in Sources */,
 				A9DB6629271463300017E3B4 /* CustomTabBarContoller.swift in Sources */,
 				A9DB66222713725B0017E3B4 /* TagView.swift in Sources */,
 				A92DDB57270F77EC00135B58 /* MainViewController.swift in Sources */,
+				A91533602718806600BB5ACA /* Color.swift in Sources */,
 				A9DB66172712E38B0017E3B4 /* Task.swift in Sources */,
-				A9DB661B2712F4370017E3B4 /* Structures.swift in Sources */,
-				A92DDB57270F77EC00135B58 /* ViewController.swift in Sources */,
-				A915334C2717912600BB5ACA /* Extensions.swift in Sources */,
-				A915334E271797A200BB5ACA /* DayContainer.swift in Sources */,
+				A9DB661B2712F4370017E3B4 /* Time.swift in Sources */,
+				A915334C2717912600BB5ACA /* Int.swift in Sources */,
+				A915334E271797A200BB5ACA /* TodayTasks.swift in Sources */,
+				A91533592718383E00BB5ACA /* TaskGroupTableViewCell.swift in Sources */,
 				A9DB66192712E3D20017E3B4 /* Tag.swift in Sources */,
+				A915335E271865CB00BB5ACA /* TimerScreenViewController.swift in Sources */,
 				A92DDB53270F77EC00135B58 /* AppDelegate.swift in Sources */,
 				A915335027179BB800BB5ACA /* Service.swift in Sources */,
+				A915335C2718429400BB5ACA /* CurrentTaskVC.swift in Sources */,
 				A9DB661D2712F6870017E3B4 /* TaskContainer.swift in Sources */,
 				A92DDB55270F77EC00135B58 /* SceneDelegate.swift in Sources */,
 			);

@@ -9,11 +9,6 @@ import UIKit
 
 @IBDesignable
 class CircleView: UIView {
-    @IBInspectable var startColor: UIColor? = .white
-    @IBInspectable var endColor: UIColor? = .white
-    @IBInspectable var lineWidth: CGFloat = 2
-    @IBInspectable var fillColor: UIColor? = .white
-
     private let gradientLayer: CAGradientLayer = {
         let gradientLayer = CAGradientLayer()
         gradientLayer.type = .radial
@@ -21,6 +16,10 @@ class CircleView: UIView {
         gradientLayer.endPoint = CGPoint(x: 1.5, y: -0.5)
         return gradientLayer
     }()
+    @IBInspectable var startColor: UIColor? = .white
+    @IBInspectable var endColor: UIColor? = .white
+    @IBInspectable var lineWidth: CGFloat = 2
+    @IBInspectable var fillColor: UIColor? = .white
 
     override init(frame: CGRect = .zero) {
         super.init(frame: frame)
@@ -46,7 +45,7 @@ private extension CircleView {
 
     func updateGradient() {
         gradientLayer.frame = bounds
-        gradientLayer.colors = [startColor, endColor].map { $0?.cgColor }
+        gradientLayer.colors = [startColor, endColor].compactMap { $0?.cgColor }
 
         let center = CGPoint(x: bounds.midX, y: bounds.midY)
         let radius = (min(bounds.width, bounds.height) - lineWidth) / 2

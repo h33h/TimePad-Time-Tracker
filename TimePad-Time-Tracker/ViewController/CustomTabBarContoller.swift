@@ -58,19 +58,10 @@ class CustomTabBarContoller: UITabBarController, UITabBarControllerDelegate {
     }
     @objc
     func leftAction(sender: UIButton) {
-        selectedIndex = 0
+        performSegue(withIdentifier: "Timer", sender: UIButton.self)
     }
     @objc
     func rightAction(sender: UIButton) {
         selectedIndex = 2
     }
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 }

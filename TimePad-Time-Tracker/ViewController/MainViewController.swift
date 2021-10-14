@@ -10,8 +10,8 @@ import UIKit
 class MainViewController: UIViewController {
     private var service = Service()
     private let reuseIdentifire = String(describing: TaskGroupTableViewCell.self)
-    @IBOutlet var currentTaskView: UIView!
-    @IBOutlet var tableVeiw: UITableView!
+    @IBOutlet private var currentTaskView: UIView!
+    @IBOutlet private var tableVeiw: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
         currentTaskView.layer.cornerRadius = 12
@@ -33,19 +33,16 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource {
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: reuseIdentifire, for: indexPath) as? TaskGroupTableViewCell
+        guard let cell = cell else { return UITableViewCell() }
         let taskGroup = service.todayTasks.taskGroups[indexPath.row]
-        cell?.circleView.startColor = taskGroup.currentTask?.color?.convertColor()
-        cell?.circleView.endColor = taskGroup.currentTask?.color?.convertColor()
-        cell?.circleView.fillColor = taskGroup.currentTask?.color?.convertColor()
-        cell?.iconOfGroup.image = UIImage(named: taskGroup.icon)
-        cell?.iconOfGroup.tintColor = .white
-        cell?.taskGroupLabel.text = taskGroup.title
-        cell?.tagView.text = taskGroup.tag?.title
-        cell?.tagView.textColor = taskGroup.tag?.color?.convertColor()
-        cell?.currentTaskTag.text = taskGroup.currentTask?.title
-        cell?.currentTaskTag.textColor = taskGroup.currentTask?.color?.convertColor()
-        cell?.timeLabel.text = taskGroup.currentTask?.time.toString()
-        return cell ?? UITableViewCell()
+        cell.color = taskGroup.currentTask?.color?.convertColor()
+        cell.setIconOfGroup(iconTitle: taskGroup.icon)
+        cell.tGroupLabel = taskGroup.title
+        cell.tagLabel = taskGroup.tag?.title
+        cell.tagColor = taskGroup.tag?.color?.convertColor()
+        cell.currentTaskLabel = taskGroup.currentTask?.title
+        cell.time = taskGroup.currentTask?.time.toString()
+        return cell
     }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         100

@@ -8,14 +8,68 @@
 import UIKit
 
 class TaskGroupTableViewCell: UITableViewCell {
-
-    @IBOutlet weak var circleView: CircleView!
-    @IBOutlet weak var taskGroupLabel: UILabel!
-    @IBOutlet weak var tagView: TagView!
-    @IBOutlet weak var currentTaskTag: TagView!
-    @IBOutlet weak var timeLabel: UILabel!
-    @IBOutlet weak var contentsView: UIView!
-    @IBOutlet weak var iconOfGroup: UIImageView!
+    var color: UIColor? {
+        get {
+            circleView.startColor
+        }
+        set {
+            circleView.startColor = newValue
+            circleView.endColor = newValue
+            circleView.fillColor = newValue
+            currentTaskTag.textColor = newValue
+        }
+    }
+    var tGroupLabel: String? {
+        get {
+            taskGroupLabel.text
+        }
+        set {
+            taskGroupLabel.text = newValue
+        }
+    }
+    var tagLabel: String? {
+        get {
+            tagView.text
+        }
+        set {
+            tagView.text = newValue
+        }
+    }
+    var tagColor: UIColor? {
+        get {
+            tagView.textColor
+        }
+        set {
+            tagView.textColor = newValue
+        }
+    }
+    var currentTaskLabel: String? {
+        get {
+            currentTaskTag.text
+        }
+        set {
+            currentTaskTag.text = newValue
+        }
+    }
+    var time: String? {
+        get {
+            timeLabel.text
+        }
+        set {
+            timeLabel.text = newValue
+        }
+    }
+    @IBOutlet private var circleView: CircleView!
+    @IBOutlet private var taskGroupLabel: UILabel!
+    @IBOutlet private var tagView: TagView!
+    @IBOutlet private var currentTaskTag: TagView!
+    @IBOutlet private var timeLabel: UILabel!
+    @IBOutlet private var contentsView: UIView!
+    @IBOutlet private var iconOfGroup: UIImageView!
+    func setIconOfGroup(iconTitle: String) {
+        iconOfGroup.image = UIImage(named: iconTitle)
+        iconOfGroup.tintColor = .white
+    }
     override func awakeFromNib() {
         super.awakeFromNib()
         contentsView.layer.cornerRadius = 12

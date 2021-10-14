@@ -31,6 +31,9 @@ public final class TodayTasks: DayContainerProtocol {
     public var currentTaskGroup: TaskContainer? {
         curTaskGroup
     }
+    public var count: Int {
+        allTaskGroups.count
+    }
     required init(taskGroups: [TaskContainer] = [TaskContainer]()) {
         self.allTaskGroups = taskGroups
         guard !taskGroups.isEmpty && (currentTaskGroup) == nil else { return }

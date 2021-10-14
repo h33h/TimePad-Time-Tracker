@@ -11,7 +11,7 @@ public final class Service {
     private var staticData: [TaskContainer] = {
         var temp = [TaskContainer]()
         temp.append(TaskContainer(containerTitle: "UI Design",
-                                  containerIconTitle: "desktop",
+                                  containerIconTitle: "monitor",
                                   tag: Tag(tagTitle: "Work",
                                            tagColor: Color(red: 0.992,
                                                            green: 0.357,
@@ -35,7 +35,7 @@ public final class Service {
                                                                 blue: 0.337,
                                                                 alpha: 1))]))
         temp.append(TaskContainer(containerTitle: "Learn HTML & CSS",
-                                  containerIconTitle: "code.block",
+                                  containerIconTitle: "code.slash",
                                   tag: Tag(tagTitle: "Personal",
                                            tagColor: Color(red: 0.51,
                                                            green: 0.51,
@@ -61,7 +61,7 @@ public final class Service {
         return temp
     }()
     private var today: TodayTasks
-    public var todayTasks: TodayTasks{
+    public var todayTasks: TodayTasks {
         today
     }
     required init () {

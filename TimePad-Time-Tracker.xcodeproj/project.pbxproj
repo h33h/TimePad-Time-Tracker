@@ -123,6 +123,8 @@
 				A9DB662C27148F870017E3B4 /* CurrentTaskViewController.swift */,
 			);
 			path = ViewController;
+               sourceTree = "<group>";
+        };
 		A9DB66152712E3550017E3B4 /* Model */ = {
 			isa = PBXGroup;
 			children = (

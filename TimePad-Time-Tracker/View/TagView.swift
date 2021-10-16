@@ -9,15 +9,31 @@ import UIKit
 
 @IBDesignable
 class TagView: UILabel {
+    let layerShape = CAShapeLayer()
     override var textColor: UIColor? {
         didSet {
-            backgroundColor = textColor?.withAlphaComponent(0.1)
+            layerShape.fillColor = textColor?.withAlphaComponent(0.1).cgColor
         }
     }
+    required init?(coder: NSCoder) {
+        super.init(coder: coder)
+        initialize()
+    }
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        initialize()
+    }
     override func layoutSubviews() {
-        frame = CGRect(x: frame.origin.x, y: frame.origin.y, width: frame.size.width + 8, height: frame.size.height + 5)
+        layerShape.path = UIBezierPath(
+            roundedRect: CGRect(
+                x: bounds.origin.x - 8,
+                y: bounds.origin.y - 5,
+                width: bounds.size.width + 16,
+                height: bounds.size.height + 10),
+            cornerRadius: 6).cgPath
+    }
+    func initialize() {
         textAlignment = .center
-        clipsToBounds = true
-        layer.cornerRadius = 6
+        layer.addSublayer(layerShape)
     }
 }

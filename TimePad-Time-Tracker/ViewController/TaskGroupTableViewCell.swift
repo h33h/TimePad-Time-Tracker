@@ -8,6 +8,28 @@
 import UIKit
 
 class TaskGroupTableViewCell: UITableViewCell {
+    @IBOutlet private var circleView: CircleView!
+    @IBOutlet private var taskGroupLabel: UILabel!
+    @IBOutlet private var tagView: TagView!
+    @IBOutlet private var currentTaskTag: TagView!
+    @IBOutlet private var timeLabel: UILabel!
+    @IBOutlet private var contentsView: UIView!
+    @IBOutlet private var iconOfGroup: UIImageView!
+    func setIconOfGroup(iconTitle: String) {
+        iconOfGroup.image = UIImage(named: iconTitle)
+        iconOfGroup.tintColor = .white
+    }
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        contentsView.layer.cornerRadius = 12
+    }
+
+    override func setSelected(_ selected: Bool, animated: Bool) {
+        super.setSelected(selected, animated: animated)
+    }
+}
+
+extension TaskGroupTableViewCell {
     var color: UIColor? {
         get {
             circleView.startColor
@@ -58,24 +80,5 @@ class TaskGroupTableViewCell: UITableViewCell {
         set {
             timeLabel.text = newValue
         }
-    }
-    @IBOutlet private var circleView: CircleView!
-    @IBOutlet private var taskGroupLabel: UILabel!
-    @IBOutlet private var tagView: TagView!
-    @IBOutlet private var currentTaskTag: TagView!
-    @IBOutlet private var timeLabel: UILabel!
-    @IBOutlet private var contentsView: UIView!
-    @IBOutlet private var iconOfGroup: UIImageView!
-    func setIconOfGroup(iconTitle: String) {
-        iconOfGroup.image = UIImage(named: iconTitle)
-        iconOfGroup.tintColor = .white
-    }
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        contentsView.layer.cornerRadius = 12
-    }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
     }
 }

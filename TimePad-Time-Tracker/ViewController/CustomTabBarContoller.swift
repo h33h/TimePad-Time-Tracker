@@ -8,16 +8,15 @@
 import UIKit
 
 class CustomTabBarContoller: UITabBarController, UITabBarControllerDelegate {
+    private var service = Service()
     required init?(coder: NSCoder) {
         super.init(coder: coder)
     }
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        delegate = self
-        selectedIndex = 1
-        tabBar.items?.forEach { $0.isEnabled = false }
+        tabBarInit()
+        serviceInit()
     }
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(true)
@@ -25,8 +24,34 @@ class CustomTabBarContoller: UITabBarController, UITabBarControllerDelegate {
         setupLeftButton()
         setupRightButton()
     }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.destination is TimerScreenViewController {
+            (segue.destination as? TimerScreenViewController)?.currentGroup = service.todayTasks.currentTaskGroup
+        }
+    }
+}
+
+extension CustomTabBarContoller {
+    func tabBarInit() {
+        delegate = self
+        selectedIndex = 1
+        tabBar.items?.forEach { $0.isEnabled = false }
+    }
+    func serviceInit() {
+        service.fetchTasks()
+        (children[0] as? MainViewController)?.service = service
+    }
+}
+
+extension CustomTabBarContoller {
     func setupLeftButton() {
-        let leftButton = UIButton(frame: CGRect(x: tabBar.frame.origin.x + 40, y: 8, width: 28, height: 28))
+        let leftButton = UIButton(frame: CGRect(
+            x: tabBar.frame.origin.x + 40,
+            y: 8,
+            width: 28,
+            height: 28
+        )
+        )
         leftButton.setImage(UIImage(named: "time.outline"), for: .normal)
         leftButton.tintColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.4)
         leftButton.addTarget(self, action: #selector(leftAction), for: .touchUpInside)
@@ -34,7 +59,13 @@ class CustomTabBarContoller: UITabBarController, UITabBarControllerDelegate {
         view.layoutIfNeeded()
     }
     func setupMiddleButton() {
-        let middleButton = UIButton(frame: CGRect(x: view.bounds.width / 2 - 22, y: 0, width: 44, height: 44))
+        let middleButton = UIButton(frame: CGRect(
+            x: view.bounds.width / 2 - 22,
+            y: 0,
+            width: 44,
+            height: 44
+        )
+        )
         middleButton.clipsToBounds = true
         middleButton.tintColor = .white
         middleButton.backgroundColor = UIColor.black
@@ -45,7 +76,13 @@ class CustomTabBarContoller: UITabBarController, UITabBarControllerDelegate {
         view.layoutIfNeeded()
     }
     func setupRightButton() {
-        let rightButton = UIButton(frame: CGRect(x: tabBar.frame.size.width - (40 + 28), y: 8, width: 28, height: 28))
+        let rightButton = UIButton(frame: CGRect(
+            x: tabBar.frame.size.width - (40 + 28),
+            y: 8,
+            width: 28,
+            height: 28
+        )
+        )
         rightButton.setImage(UIImage(named: "pie.chart"), for: .normal)
         rightButton.tintColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.4)
         rightButton.addTarget(self, action: #selector(rightAction), for: .touchUpInside)

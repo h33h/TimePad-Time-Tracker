@@ -111,7 +111,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="949.23076923076917" y="79.620853080568722"/>
+            <point key="canvasLocation" x="988" y="118"/>
         </scene>
         <!--Custom Tab Bar Contoller-->
         <scene sceneID="15C-PF-xML">
@@ -136,7 +136,7 @@
             <objects>
                 <viewController id="frQ-Dg-LZa" customClass="TimerScreenViewController" customModule="TimePad_Time_Tracker" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="1C7-Z1-dAD">
-                        <rect key="frame" x="0.0" y="0.0" width="390" height="790"/>
+                        <rect key="frame" x="0.0" y="0.0" width="358" height="114"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="quE-yw-sl7"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -187,6 +187,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
+                        <viewLayoutGuide key="safeArea" id="ne6-G4-lBa"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="9pg-9v-rct" firstAttribute="top" secondItem="SsH-Ky-dNy" secondAttribute="bottom" constant="28" id="83B-Ja-ny0"/>
@@ -207,13 +208,17 @@
                         <outlet property="circleView" destination="9pg-9v-rct" id="dv9-AN-TFh"/>
                         <outlet property="currentTaskLabel" destination="W2Z-nz-uZi" id="g3w-Sm-JqJ"/>
                         <outlet property="timeLabel" destination="SsH-Ky-dNy" id="DWT-Cl-c8U"/>
+                        <segue destination="frQ-Dg-LZa" kind="presentation" identifier="Timer1" id="Uc2-jc-6YG"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oew-FK-fCN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="924.61538461538453" y="-338.03317535545023"/>
+            <point key="canvasLocation" x="405" y="-312"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="Uc2-jc-6YG"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="more" width="24" height="24"/>
         <image name="right.arrow" width="24" height="24"/>

@@ -15,8 +15,9 @@ class CustomTabBarContoller: UITabBarController, UITabBarControllerDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        service.fetchTasks()
+        (children.first as? MainViewController)?.service = service
         tabBarInit()
-        serviceInit()
     }
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(true)
@@ -34,12 +35,8 @@ class CustomTabBarContoller: UITabBarController, UITabBarControllerDelegate {
 extension CustomTabBarContoller {
     func tabBarInit() {
         delegate = self
-        selectedIndex = 1
+        selectedIndex = 0
         tabBar.items?.forEach { $0.isEnabled = false }
-    }
-    func serviceInit() {
-        service.fetchTasks()
-        (children[0] as? MainViewController)?.service = service
     }
 }
 
@@ -91,7 +88,6 @@ extension CustomTabBarContoller {
     }
     @objc
     func middleAction(sender: UIButton) {
-        selectedIndex = 1
     }
     @objc
     func leftAction(sender: UIButton) {
@@ -99,6 +95,7 @@ extension CustomTabBarContoller {
     }
     @objc
     func rightAction(sender: UIButton) {
-        selectedIndex = 2
+        selectedIndex = 1
+        (tabBar.subviews[5] as? UIButton)?.setImage(UIImage(named: "pie.chart.filled"), for: .normal)
     }
 }

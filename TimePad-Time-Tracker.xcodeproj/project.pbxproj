@@ -17,6 +17,9 @@
 		A91533602718806600BB5ACA /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = A915335F2718806600BB5ACA /* Color.swift */; };
 		A91533622719BCFB00BB5ACA /* TimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A91533612719BCFA00BB5ACA /* TimerView.swift */; };
 		A9153364271AB5FD00BB5ACA /* TimerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9153363271AB5FD00BB5ACA /* TimerVC.swift */; };
+		A9153366271AFAF300BB5ACA /* ReportVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9153365271AFAF300BB5ACA /* ReportVC.swift */; };
+		A9153368271B19B700BB5ACA /* DiagramVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9153367271B19B700BB5ACA /* DiagramVC.swift */; };
+		A915336A271B1A1600BB5ACA /* DiagramView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9153369271B1A1600BB5ACA /* DiagramView.swift */; };
 		A92DDB53270F77EC00135B58 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A92DDB52270F77EC00135B58 /* AppDelegate.swift */; };
 		A92DDB55270F77EC00135B58 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A92DDB54270F77EC00135B58 /* SceneDelegate.swift */; };
 		A92DDB57270F77EC00135B58 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A92DDB56270F77EC00135B58 /* MainViewController.swift */; };
@@ -47,6 +50,9 @@
 		A915335F2718806600BB5ACA /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		A91533612719BCFA00BB5ACA /* TimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerView.swift; sourceTree = "<group>"; };
 		A9153363271AB5FD00BB5ACA /* TimerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerVC.swift; sourceTree = "<group>"; };
+		A9153365271AFAF300BB5ACA /* ReportVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportVC.swift; sourceTree = "<group>"; };
+		A9153367271B19B700BB5ACA /* DiagramVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiagramVC.swift; sourceTree = "<group>"; };
+		A9153369271B1A1600BB5ACA /* DiagramView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiagramView.swift; sourceTree = "<group>"; };
 		A92DDB4F270F77EC00135B58 /* TimePad-Time-Tracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "TimePad-Time-Tracker.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A92DDB52270F77EC00135B58 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A92DDB54270F77EC00135B58 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -139,6 +145,7 @@
 				A9DB661F271335900017E3B4 /* CircleView.swift */,
 				A9DB66212713725B0017E3B4 /* TagView.swift */,
 				A91533612719BCFA00BB5ACA /* TimerView.swift */,
+				A9153369271B1A1600BB5ACA /* DiagramView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -153,6 +160,8 @@
 				A91533582718383E00BB5ACA /* TaskGroupTableViewCell.xib */,
 				A915335D271865CB00BB5ACA /* TimerScreenViewController.swift */,
 				A9153363271AB5FD00BB5ACA /* TimerVC.swift */,
+				A9153365271AFAF300BB5ACA /* ReportVC.swift */,
+				A9153367271B19B700BB5ACA /* DiagramVC.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -287,15 +296,18 @@
 				A9DB6629271463300017E3B4 /* CustomTabBarContoller.swift in Sources */,
 				A9DB66222713725B0017E3B4 /* TagView.swift in Sources */,
 				A92DDB57270F77EC00135B58 /* MainViewController.swift in Sources */,
+				A9153366271AFAF300BB5ACA /* ReportVC.swift in Sources */,
 				A91533602718806600BB5ACA /* Color.swift in Sources */,
 				A9DB66172712E38B0017E3B4 /* Task.swift in Sources */,
 				A9DB661B2712F4370017E3B4 /* Time.swift in Sources */,
+				A915336A271B1A1600BB5ACA /* DiagramView.swift in Sources */,
 				A915334C2717912600BB5ACA /* Int.swift in Sources */,
 				A915334E271797A200BB5ACA /* TodayTasks.swift in Sources */,
 				A91533592718383E00BB5ACA /* TaskGroupTableViewCell.swift in Sources */,
 				A9DB66192712E3D20017E3B4 /* Tag.swift in Sources */,
 				A915335E271865CB00BB5ACA /* TimerScreenViewController.swift in Sources */,
 				A92DDB53270F77EC00135B58 /* AppDelegate.swift in Sources */,
+				A9153368271B19B700BB5ACA /* DiagramVC.swift in Sources */,
 				A915335027179BB800BB5ACA /* Service.swift in Sources */,
 				A915335C2718429400BB5ACA /* CurrentTaskVC.swift in Sources */,
 				A9DB661D2712F6870017E3B4 /* TaskContainer.swift in Sources */,

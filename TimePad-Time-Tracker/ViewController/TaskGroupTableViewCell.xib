@@ -58,13 +58,13 @@
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jXZ-lZ-dii" customClass="TagView" customModule="TimePad_Time_Tracker" customModuleProvider="target">
-                                <rect key="frame" x="76" y="41" width="31" height="14.5"/>
+                                <rect key="frame" x="84" y="46" width="31" height="14.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M9x-2c-jaS" customClass="TagView" customModule="TimePad_Time_Tracker" customModuleProvider="target">
-                                <rect key="frame" x="131" y="41" width="31" height="14.5"/>
+                                <rect key="frame" x="139" y="46" width="31" height="14.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -74,14 +74,14 @@
                         <constraints>
                             <constraint firstItem="PdP-a9-crd" firstAttribute="leading" secondItem="raX-qZ-aGF" secondAttribute="leading" constant="16" id="0HM-k8-Nrd"/>
                             <constraint firstItem="M9x-2c-jaS" firstAttribute="leading" secondItem="jXZ-lZ-dii" secondAttribute="trailing" constant="24" id="254-MQ-zsl"/>
-                            <constraint firstItem="M9x-2c-jaS" firstAttribute="top" secondItem="aJo-e1-ZPL" secondAttribute="bottom" constant="8" id="8jT-jx-D1y"/>
-                            <constraint firstItem="jXZ-lZ-dii" firstAttribute="leading" secondItem="PdP-a9-crd" secondAttribute="trailing" constant="16" id="CAf-RI-BsQ"/>
+                            <constraint firstItem="M9x-2c-jaS" firstAttribute="top" secondItem="aJo-e1-ZPL" secondAttribute="bottom" constant="13" id="8jT-jx-D1y"/>
+                            <constraint firstItem="jXZ-lZ-dii" firstAttribute="leading" secondItem="PdP-a9-crd" secondAttribute="trailing" constant="24" id="CAf-RI-BsQ"/>
                             <constraint firstAttribute="trailing" secondItem="XYb-Dj-n6g" secondAttribute="trailing" constant="16" id="DLO-8g-aJD"/>
                             <constraint firstAttribute="bottom" secondItem="ciT-rT-dzH" secondAttribute="bottom" constant="16" id="J7e-ud-lcb"/>
                             <constraint firstItem="PdP-a9-crd" firstAttribute="top" secondItem="raX-qZ-aGF" secondAttribute="top" constant="16" id="OE0-jp-Lih"/>
                             <constraint firstAttribute="trailing" secondItem="ciT-rT-dzH" secondAttribute="trailing" constant="16" id="Rd9-Hy-ASK"/>
                             <constraint firstItem="aJo-e1-ZPL" firstAttribute="top" secondItem="raX-qZ-aGF" secondAttribute="top" constant="16" id="Rei-Nl-mRi"/>
-                            <constraint firstItem="jXZ-lZ-dii" firstAttribute="top" secondItem="aJo-e1-ZPL" secondAttribute="bottom" constant="8" id="qy8-Yg-kcc"/>
+                            <constraint firstItem="jXZ-lZ-dii" firstAttribute="top" secondItem="aJo-e1-ZPL" secondAttribute="bottom" constant="13" id="qy8-Yg-kcc"/>
                             <constraint firstItem="XYb-Dj-n6g" firstAttribute="top" secondItem="raX-qZ-aGF" secondAttribute="top" constant="16" id="tWi-Lb-38Q"/>
                             <constraint firstItem="aJo-e1-ZPL" firstAttribute="leading" secondItem="PdP-a9-crd" secondAttribute="trailing" constant="16" id="xCF-1k-8pY"/>
                         </constraints>

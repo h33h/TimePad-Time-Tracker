@@ -9,17 +9,28 @@ import Foundation
 
 public protocol TaskProtocol: TagProtocol {
     var time: Time { get }
+    var isEnabled: Bool? { get }
     func start()
     func stop()
 }
 
 public final class Task: TaskProtocol {
     private var taskColor: Color?
-    private var timer: Timer
-    private var timeValue: Int
+    private var timer: Timer?
+    private var timeValue: Int {
+        didSet {
+            NotificationCenter.default.post(
+                name: Notification.Name(rawValue: "timeValueUpdate"),
+                object: self
+            )
+        }
+    }
     public var title: String
     public var color: Color? {
         taskColor
+    }
+    public var isEnabled: Bool? {
+        timer?.isValid
     }
     public var time: Time {
         timeValue.secondsToHoursMinutesSeconds()
@@ -28,7 +39,6 @@ public final class Task: TaskProtocol {
         self.title = title
         self.taskColor = color
         self.timeValue = 0
-        self.timer = Timer()
     }
     convenience init (taskTitle title: String) {
         self.init(taskTitle: title, taskColor: nil)
@@ -37,11 +47,11 @@ public final class Task: TaskProtocol {
         self.init(taskTitle: "")
     }
     public func start() {
-        timer = Timer(timeInterval: 1.0, repeats: true) { [weak self] _ in
+        timer = Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true) {[weak self] _ in
             self?.timeValue += 1
         }
     }
     public func stop() {
-        timer.invalidate()
+        timer?.invalidate()
     }
 }
